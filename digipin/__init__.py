@@ -1,4 +1,4 @@
 # __init__.py
-from .module import digipin,decode
+from .module import encode,decode
 
-__all__ = ["digipin","decode"]
+__all__ = ["encode","decode"]
