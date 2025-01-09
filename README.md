@@ -14,13 +14,13 @@ pip install git+https://github.com/goki75/pydigipin.git
 ```
 ## Usage
 ### Encoding
-Import the digipin and/or decode function from the module and pass the latitude and longitude as arguments:
+Import the encode and/or decode function from the module and pass the latitude and longitude as arguments:
 
 ```python
-from digipin import digipin
+from digipin import encode
 
 try:
-    dpin = digipin(15.5, 65.7)
+    dpin = encode(15.5, 65.7)
     print(f"DIGIPIN: {digipin}")
 except ValueError as e:
     print(e)
