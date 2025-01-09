@@ -25,7 +25,7 @@ try:
 except ValueError as e:
     print(e)
 ```
-###  Output
+####  Output
 
 ```bash
 DIGIPIN: GL8-874-X3GW
@@ -39,7 +39,7 @@ try:
 except Error as e:
     print(e)
 ```
-###  Output
+####  Output
 
 ```bash
 (Lat,Long): (15.500004529953003, 65.70001101493835)
