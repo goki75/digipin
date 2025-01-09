@@ -1,11 +1,12 @@
-What is DIGIPIN?
+# DIGIPIN Python Implementation - Unofficial Version
+
+DIGIPIN is a geocoding system developed by India Post in collaboration with IIT Hyderabad. It divides India's geographical territory into uniform 4-meter by 4-meter units, assigning each a unique 10-character alphanumeric code derived from latitude and longitude coordinates. This system enhances address precision, facilitating efficient delivery of public and private services across India.
+
+# What is DIGIPIN? 
 
 The Department of Posts also know as India Post is undertaking a project to establish a standardized, nationwide geo-coded addressing system by developing a National level Grid known as DIGIPIN.
 The implementation of this Digital Addressing system would ensure simplified addressing solutions for citizen centric delivery of public and private services. A standardized geo-coded addressing system would enhance India’s geo-spatial structure. It would add to the geospatial knowledge stack of the country in line with the National Geospatial Policy 2022, which seeks to strengthen the geospatial sector to support national development, economic prosperity and a thriving information economy.
 
-# DIGIPIN Python Implementation - Unofficial Version
-
-DIGIPIN is a geocoding system developed by India Post in collaboration with IIT Hyderabad. It divides India's geographical territory into uniform 4-meter by 4-meter units, assigning each a unique 10-character alphanumeric code derived from latitude and longitude coordinates. This system enhances address precision, facilitating efficient delivery of public and private services across India.
 
 ## Features
 
