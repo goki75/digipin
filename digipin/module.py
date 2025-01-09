@@ -7,11 +7,9 @@ representation of a location's latitude and longitude.
 Author: GOKI 
 License: MIT
 """
-
 # Predefine the character grids
 L1 = ('0200','3456','G87M','J9KL')
 L2 = ('JG98','K327','L456','MPWX')
-
 # Create mappings for efficient decoding
 L1_map = {L1[r][c]: (r, c) for r in range(4) for c in range(4)}
 L2_map = {L2[r][c]: (r, c) for r in range(4) for c in range(4)}
