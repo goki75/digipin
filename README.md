@@ -42,7 +42,7 @@ except Error as e:
 ####  Output
 
 ```bash
-(Lat,Long): (15.500004529953003, 65.70001101493835)
+(Lat,Long): (15.5, 65.70001)
 ```
 
 ## Input Constraints
