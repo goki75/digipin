@@ -1,4 +1,4 @@
 # __init__.py
-from .module import Get_DIGIPIN
+from .module import digipin
 
 __all__ = ["digipin"]
