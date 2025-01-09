@@ -1,14 +1,14 @@
 """
 DIGIPIN Python Implementation
 
-This module provides a function to generate and decode a DIGIPIN, an alphanumeric string 
+This module provides a function to encode and decode a DIGIPIN, an alphanumeric string 
 representation of a location's latitude and longitude. 
 
 Author: GOKI
 License: MIT
 """
 
-def digipin(lat, lon):
+def encode(lat, lon):
     """
     Generate a DIGIPIN for the given latitude and longitude.
 
@@ -112,14 +112,14 @@ def decode(DigiPin):
     cLon = (Lon2 + Lon1) / 2
     return cLat,cLon
 
-
-
 if __name__ == "__main__":
     # Example usage
     try:
         latitude = 15.5
         longitude = 65.7
-        pin = digipin(latitude, longitude)
-        print(f"DIGIPIN for ({latitude}, {longitude}): {pin}")
+        pin = encode(latitude, longitude)
+        print(f"Encode DIGIPIN for ({latitude}, {longitude}): {pin}")
+        latlon=decode(pin)
+        print(f"Decode DIGIPIN {pin}:{latlon}")
     except ValueError as e:
         print(e)
