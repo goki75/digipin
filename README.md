@@ -69,7 +69,7 @@ Feel free to fork the repository and submit pull requests for enhancements or bu
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-For more information about DIGIPIN, read [Technical document DIGIPIN ]([https://www.indiapost.gov.in/Navigation_Documents/Static_Navigation/DIGIPIN%20Technical%20Document%20Final%20English.pdf]).
-and visit [India Post DIGIPIN]([https://www.indiapost.gov.in/VAS/Pages/digipin.aspx])
+For more information about DIGIPIN, read [Technical document DIGIPIN ](https://www.indiapost.gov.in/Navigation_Documents/Static_Navigation/DIGIPIN%20Technical%20Document%20Final%20English.pdf).
+and visit [India Post DIGIPIN](https://www.indiapost.gov.in/VAS/Pages/digipin.aspx)
 
 This expanded documentation provides a detailed overview of DIGIPIN, its purpose, and how to use the Python implementation. 
