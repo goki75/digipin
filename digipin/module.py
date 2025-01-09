@@ -110,7 +110,7 @@ def decode(DigiPin):
 
     cLat = (Lat2 + Lat1) / 2
     cLon = (Lon2 + Lon1) / 2
-    return round(cLat,5),round(cLon,5)
+    return round(cLat,6),round(cLon,6)
 
 if __name__ == "__main__":
     # Example usage
