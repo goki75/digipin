@@ -66,7 +66,7 @@ def digipin(lat, lon):
             vDIGIPIN += L1[r][c]
         else:
             vDIGIPIN += L2[r][c]
-            if Lvl in {3, 6}:
+            if Lvl in (3, 6):
                 vDIGIPIN += "-"
 
         MinLat, MaxLat, MinLon, MaxLon = NextLvlMinLat, NextLvlMaxLat, NextLvlMinLon, NextLvlMaxLon
