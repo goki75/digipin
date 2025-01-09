@@ -20,17 +20,17 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 ## Installation from GitHub
 You can install this package directly from GitHub using pip:
 ```bash
-pip install git+https://github.com/goki75/PyDIGIPIN.git
+pip install git+https://github.com/goki75/pydigipin.git
 ```
 ## Usage
 
-Import the `Get_DIGIPIN` function from the module and pass the latitude and longitude as arguments:
+Import the digipin` function from the module and pass the latitude and longitude as arguments:
 
 ```python
-from digipin import Get_DIGIPIN
+from digipin import digipin
 
 try:
-    digipin = Get_DIGIPIN(15.5, 65.7)
+    dpin = digipin(15.5, 65.7)
     print(f"DIGIPIN: {digipin}")
 except ValueError as e:
     print(e)
@@ -52,16 +52,6 @@ If the inputs are out of range, the function raises a `ValueError` with an appro
 ## Understanding DIGIPIN
 
 DIGIPIN is an alphanumeric offline grid system that divides India's geographical territory into uniform 4-meter by 4-meter units. Each unit is assigned a unique 10-character alphanumeric code derived from its latitude and longitude coordinates. This system provides precise location-based identification, especially useful in areas with unstructured or changing addresses.
-
-## File Structure
-
-```
-.
-├── digipin.py         # Main implementation
-├── README.md          # Project documentation
-├── LICENSE            # License information
-└── tests              # Unit tests
-```
 
 ## Contributing
 
