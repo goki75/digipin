@@ -13,8 +13,8 @@ You can install this package directly from GitHub using pip:
 pip install git+https://github.com/goki75/pydigipin.git
 ```
 ## Usage
-
-Import the digipin` function from the module and pass the latitude and longitude as arguments:
+### Encoding
+Import the digipin and/or decode function from the module and pass the latitude and longitude as arguments:
 
 ```python
 from digipin import digipin
@@ -25,11 +25,24 @@ try:
 except ValueError as e:
     print(e)
 ```
-
-### Example Output
+###  Output
 
 ```bash
-DIGIPIN: G87M-L327-L
+DIGIPIN: GL8-874-X3GW
+```
+### Decoding
+```python
+from digipin import decode
+try:
+    latlon = decode('GL8-874-X3GW')
+    print(f"(Lat,Long): {latlon}")
+except Error as e:
+    print(e)
+```
+###  Output
+
+```bash
+(Lat,Long): (15.500004529953003, 65.70001101493835)
 ```
 
 ## Input Constraints
