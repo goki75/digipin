@@ -4,17 +4,11 @@ DIGIPIN Python Implementation
 This module provides a function to generate a DIGIPIN, an alphanumeric string representation
 of a location's latitude and longitude.
 
-Author: Your Name
+Author: GOKI
 License: MIT
 """
 
-from setuptools import setup, find_packages
-
-__version__ = "1.0.0"
-__author__ = "Your Name"
-__license__ = "MIT"
-
-def Get_DIGIPIN(lat, lon):
+def digipin(lat, lon):
     """
     Generate a DIGIPIN for the given latitude and longitude.
 
@@ -84,26 +78,7 @@ if __name__ == "__main__":
     try:
         latitude = 15.5
         longitude = 65.7
-        digipin = Get_DIGIPIN(latitude, longitude)
-        print(f"DIGIPIN for ({latitude}, {longitude}): {digipin}")
+        pin = digipin(latitude, longitude)
+        print(f"DIGIPIN for ({latitude}, {longitude}): {pin}")
     except ValueError as e:
         print(e)
-
-# Setup for pip installation
-setup(
-    name="digipin",
-    version=__version__,
-    author=__author__,
-    author_email="your.email@example.com",
-    description="A Python implementation of the DIGIPIN geocoding system",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/digipin-python",
-    packages=find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
-)
