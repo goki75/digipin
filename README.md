@@ -17,15 +17,11 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 
 - Python 3.6 or later.
 
-## Installation
-
-Clone the repository and navigate to the project directory:
-
+## Installation from GitHub
+You can install this package directly from GitHub using pip:
 ```bash
-git clone https://github.com/goki75/digipin-python.git
-cd digipin-python
+pip install git+https://github.com/yourusername/digipin-python.git
 ```
-
 ## Usage
 
 Import the `Get_DIGIPIN` function from the module and pass the latitude and longitude as arguments:
