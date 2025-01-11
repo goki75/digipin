@@ -10,7 +10,7 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 ## Installation from GitHub
 You can install this package directly from GitHub using pip:
 ```bash
-pip install git+https://github.com/goki75/pydigipin.git
+pip install git+https://github.com/goki75/digipin.git
 ```
 ## Usage
 ### Encoding
