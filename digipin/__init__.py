@@ -1,4 +1,4 @@
-from .module import DigiPin
+# __init__.py
+from .module import encode,decode
 
-__version__ = "1.0.0"
-__all__ = ["DigiPin"]
+__all__ = ["encode","decode"]
