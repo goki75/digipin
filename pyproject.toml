@@ -11,8 +11,6 @@ license = {text = "MIT"}
 authors = [
     {name = "GOKI", email = "goki75@gmail.com"}
 ]
-homepage = "https://github.com/goki75/digipin"
-repository = "https://github.com/goki75/digipin"
 keywords = ["location", "geography", "encoding", "decoding", "latitude", "longitude"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -21,7 +19,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 requires-python = ">=3.1"
-
+[project.urls]
+homepage = "https://github.com/goki75/digipin"
+repository = "https://github.com/goki75/digipin"
 [tool.setuptools]
 packages = ["digipin"]
 
