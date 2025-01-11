@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digipin"
+version = "1.0.0"
+description = "A Python module for encoding and decoding DIGIPIN, an alphanumeric representation of latitude and longitude."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "GOKI", email = "goki@example.com"}
+]
+homepage = "https://github.com/goki75/digipin"
+repository = "https://github.com/goki75/digipin"
+keywords = ["location", "geography", "encoding", "decoding", "latitude", "longitude"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+development = ["pytest", "black", "flake8"]
+
+[tool.setuptools]
+packages = ["digipin"]
+
+[tool.setuptools.package-data]
+digipin = ["py.typed"]
