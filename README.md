@@ -6,7 +6,7 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 - **Input Validation**: Ensures latitude and longitude are within acceptable ranges.
 - **Precision Levels**: Supports up to 10 levels of precision for detailed location encoding.
 ## Requirements
-- Python 3.6 or later.
+- Python 3.1 or later.
 ## Installation from GitHub
 You can install this package directly from GitHub using pip:
 ```bash
