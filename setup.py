@@ -13,7 +13,7 @@ setup(
     description="A Python implementation of the DIGIPIN geocoding system",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/goki75/PyDIGIPIN",
+    url="https://github.com/goki75/digipin",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
