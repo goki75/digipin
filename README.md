@@ -17,9 +17,9 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 
 - Python 3.6 or later.
 
-## Installation from PyPI
+## Installation from GitHub
 
-You can install this package via pip:
+You can install this package using pip from git:
 
 ```bash
 pip install git+https://github.com/goki75/pydigipin.git
