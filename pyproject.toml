@@ -9,7 +9,7 @@ description = "A Python module for encoding and decoding DIGIPIN, an alphanumeri
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "GOKI", email = "goki75@gmail.com"}
+    {name = "G Kiran", email = "goki75@gmail.com"}
 ]
 keywords = ["location", "geography", "encoding", "decoding", "latitude", "longitude"]
 classifiers = [
