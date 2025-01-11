@@ -20,7 +20,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-requires-python = ">=3.6"
+requires-python = ">=3.1"
 
 [tool.setuptools]
 packages = ["digipin"]
