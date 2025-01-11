@@ -22,7 +22,7 @@ DIGIPIN is a geocoding system developed by India Post in collaboration with IIT 
 You can install this package using pip from git:
 
 ```bash
-pip install git+https://github.com/goki75/pydigipin.git
+pip install git+https://github.com/goki75/digipin.git
 ```
 
 ## Usage
