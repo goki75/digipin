@@ -4,7 +4,7 @@ DIGIPIN Python Implementation
 This module provides functions to encode and decode a DIGIPIN, an alphanumeric string 
 representation of a location's latitude and longitude. 
 
-Author: GOKI 
+Author: G Kiran (GOKI) 
 License: MIT
 """
 # Predefine the character grids
