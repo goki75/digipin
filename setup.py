@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 __version__ = "1.0.0"
-__author__ = "goki"
+__author__ = "G Kiran"
 __license__ = "MIT"
 
 # Setup for pip installation
