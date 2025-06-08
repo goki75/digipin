@@ -10,6 +10,9 @@ License: MIT
 2025-06-06: Updated as per https://github.com/CEPT-VZG/digipin/blob/main/src/digipin.js
 """
 import math
+import re
+
+REGEX_PATTERN_DIGIPIN = re.compile(r'^[2-9CFJKLMPT]{3}-[2-9CFJKLMPT]{3}-[2-9CFJKLMPT]{4}$')
 
 DIGIPIN_GRID = [
     ['F', 'C', '9', '8'],
@@ -24,6 +27,11 @@ BOUNDS = {
     'minLon': 63.5,
     'maxLon': 99.5
 }
+
+def validate_digipin(d):
+    """Validates if a given string is a valid digipin. Should be in format like: 4FP-994-M7C6"""
+    global REGEX_PATTERN_DIGIPIN
+    return bool(REGEX_PATTERN_DIGIPIN.match(d))
 
 def encode(lat, lon):
     if lat < BOUNDS['minLat'] or lat > BOUNDS['maxLat']:
@@ -64,6 +72,9 @@ def encode(lat, lon):
     return digipin
 
 def decode(digipin):
+    if not validate_digipin(digipin):
+        raise ValueError('Invalid DIGIPIN')
+        
     pin = digipin.replace('-', '')
     if len(pin) != 10:
         raise ValueError('Invalid DIGIPIN')
