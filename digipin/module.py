@@ -10,8 +10,6 @@ License: MIT
 
 2025-06-06: Updated as per https://github.com/CEPT-VZG/digipin/blob/main/src/digipin.js
 """
-import math
-
 GRID = ["FC98", "J327", "K456", "LMPT"]
 BOUNDS = {"minLat": 2.5, "maxLat": 38.5, "minLon": 63.5, "maxLon": 99.5 }
 
@@ -30,8 +28,8 @@ def encode(lat, lon):
         lon_div = (max_lon - min_lon) / 4
 
         # REVERSED row logic (to match original)
-        row = 3 - math.floor((lat - min_lat) / lat_div)
-        col = math.floor((lon - min_lon) / lon_div)
+        row = 3 - int((lat - min_lat) // lat_div)
+        col =int((lon - min_lon) // lon_div)
 
         row = max(0, min(row, 3))
         col = max(0, min(col, 3))
