@@ -1,3 +1,4 @@
+#merged
 """
 DIGIPIN Python Implementation 
 
@@ -11,19 +12,8 @@ License: MIT
 """
 import math
 
-DIGIPIN_GRID = [
-    ['F', 'C', '9', '8'],
-    ['J', '3', '2', '7'],
-    ['K', '4', '5', '6'],
-    ['L', 'M', 'P', 'T']
-]
-
-BOUNDS = {
-    'minLat': 2.5,
-    'maxLat': 38.5,
-    'minLon': 63.5,
-    'maxLon': 99.5
-}
+GRID = ["FC98", "J327", "K456", "LMPT"]
+BOUNDS = {"minLat": 2.5, "maxLat": 38.5, "minLon": 63.5, "maxLon": 99.5 }
 
 def encode(lat, lon):
     if lat < BOUNDS['minLat'] or lat > BOUNDS['maxLat']:
@@ -31,11 +21,8 @@ def encode(lat, lon):
     if lon < BOUNDS['minLon'] or lon > BOUNDS['maxLon']:
         raise ValueError('Longitude out of range')
 
-    min_lat = BOUNDS['minLat']
-    max_lat = BOUNDS['maxLat']
-    min_lon = BOUNDS['minLon']
-    max_lon = BOUNDS['maxLon']
-
+    min_lat, max_lat  = BOUNDS['minLat'],BOUNDS['maxLat']
+    min_lon, max_lon = BOUNDS['minLon'], BOUNDS['maxLon']
     digipin = ''
 
     for level in range(1, 11):
@@ -49,7 +36,7 @@ def encode(lat, lon):
         row = max(0, min(row, 3))
         col = max(0, min(col, 3))
 
-        digipin += DIGIPIN_GRID[row][col]
+        digipin += GRID[row][col]
 
         if level == 3 or level == 6:
             digipin += '-'
@@ -64,53 +51,34 @@ def encode(lat, lon):
     return digipin
 
 def decode(digipin):
-    pin = digipin.replace('-', '')
+    pin = digipin.upper().replace('-', '')
     if len(pin) != 10:
-        raise ValueError('Invalid DIGIPIN')
-    
-    min_lat = BOUNDS['minLat']
-    max_lat = BOUNDS['maxLat']
-    min_lon = BOUNDS['minLon']
-    max_lon = BOUNDS['maxLon']
+        raise ValueError("Invalid DIGIPIN")
 
-    for i in range(10):
-        char = pin[i]
+    min_lat, max_lat = BOUNDS["minLat"], BOUNDS["maxLat"]
+    min_lon, max_lon = BOUNDS["minLon"], BOUNDS["maxLon"]
+
+    for char in pin:
         found = False
-        ri = -1
-        ci = -1
-
-        # Locate character in DIGIPIN grid
         for r in range(4):
-            for c in range(4):
-                if DIGIPIN_GRID[r][c] == char:
-                    ri = r
-                    ci = c
-                    found = True
-                    break
-            if found:
+            if char in GRID[r]:
+                c = GRID[r].index(char)
+                found = True
                 break
-
         if not found:
-            raise ValueError('Invalid character in DIGIPIN')
+            raise ValueError("Invalid character in DIGIPIN")
 
-        lat_div = (max_lat - min_lat) / 4
-        lon_div = (max_lon - min_lon) / 4
+        lat_div = (max_lat-min_lat)/4
+        lon_div = (max_lon-min_lon)/4
 
-        lat1 = max_lat - lat_div * (ri + 1)
-        lat2 = max_lat - lat_div * ri
-        lon1 = min_lon + lon_div * ci
-        lon2 = min_lon + lon_div * (ci + 1)
+        max_lat = max_lat-lat_div*r
+        min_lat = max_lat-lat_div
+        min_lon = min_lon+lon_div*c
+        max_lon = min_lon+lon_div
 
-        # Update bounding box for next level
-        min_lat = lat1
-        max_lat = lat2
-        min_lon = lon1
-        max_lon = lon2
-
-    center_lat = round((min_lat + max_lat) / 2, 6)
-    center_lon = round((min_lon + max_lon) / 2, 6)
-
-    return center_lat, center_lon
+    lat = round((min_lat+max_lat)/2,6)
+    lon = round((min_lon+max_lon)/2,6)
+    return lat,lon
 
 if __name__ == "__main__":
     # Example usage
