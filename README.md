@@ -27,7 +27,7 @@ Import the encode and/or decode function from the module and pass the latitude a
 from digipin import encode
 
 try:
-    dpin = encode(15.5, 65.7)
+    dpin = encode(8.2006, 77.4646)
     print(f"DIGIPIN: {digipin}")
 except ValueError as e:
     print(e)
@@ -35,13 +35,13 @@ except ValueError as e:
 ####  Output
 
 ```bash
-DIGIPIN: GL8-874-X3GW
+DIGIPIN: M2J-T3L-747J
 ```
 ### Decoding
 ```python
 from digipin import decode
 try:
-    latlon = decode('GL8-874-X3GW')
+    latlon = decode('M2J-T3L-747J')
     print(f"(Lat,Long): {latlon}")
 except Error as e:
     print(e)
@@ -49,7 +49,7 @@ except Error as e:
 ####  Output
 
 ```bash
-(Lat,Long): (15.5, 65.70001)
+(Lat,Long): (8.2006, 77.4646)
 ```
 
 ## Input Constraints
